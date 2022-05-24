@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-24T22:59:24.024Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="d0z3QhvY0lA9eUknx11c" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-24T23:30:29.164Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="D-xoOVetOef4MmqY0Rqb" version="18.1.2" type="github">
   <diagram id="pV1UsLXD76Uy4-o15l10" name="Page-1">
-    <mxGraphModel dx="667" dy="371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="574" dy="319" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -158,17 +158,137 @@
         <mxCell id="sOp1A83OYoMBxLgUxcqA-70" value="&lt;b&gt;Data APIs&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="70" y="920" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sOp1A83OYoMBxLgUxcqA-71" value="1. getPosts(userId, apiKey, numOfPosts, minPost)&lt;br&gt;2. createPost(apiKey, userId, postData)&lt;br&gt;3. createComment(apiKey, userId, postId, commentData)&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-71" value="1. getPosts(userId, apiKey, numOfPosts, minPost)&lt;br&gt;2. createPost(apiKey, userId, postData)&lt;br&gt;3. createComment(apiKey, userId, postId, commentData)&amp;nbsp;&lt;br&gt;4.loadNewPosts()" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="70" y="970" width="240" height="150" as="geometry" />
         </mxCell>
         <mxCell id="sOp1A83OYoMBxLgUxcqA-72" value="&lt;b&gt;Data Store&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
-          <mxGeometry x="355" y="920" width="160" height="30" as="geometry" />
+          <mxGeometry x="730" y="920" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sOp1A83OYoMBxLgUxcqA-73" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
-          <mxGeometry x="355" y="970" width="240" height="150" as="geometry" />
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-73" value="Decide a fetching point, eg here it can be feed_id&lt;br&gt;1. user_store: {[feed_id]: users}&lt;br&gt;2. media_store: {[feed_id]: media}&lt;br&gt;3. origin_store: {[feed_id]: entity}&lt;br&gt;4. comments_store: {[feed_id]: comments}&lt;br&gt;5. feeds: {[feed_id]: feed}" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="730" y="970" width="240" height="150" as="geometry" />
         </mxCell>
         <mxCell id="sOp1A83OYoMBxLgUxcqA-74" value="REST" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="70" y="1130" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-75" value="&lt;b&gt;Load new stories&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="430" y="920" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-76" value="SSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="970" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-77" value="Web sockets" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="970" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-78" value="Long Polling" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="350" y="970" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-79" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;-Slow as latency is there&lt;br&gt;-easy to implement&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1010" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-80" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;- dont follow HTTP&lt;br&gt;&lt;/span&gt;- faster" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1010" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-81" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;-slower than websockets, but still faster&lt;br&gt;- follow HTTP&lt;br&gt;- right choice for this problem&lt;br&gt;- easy to load balance&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1010" width="70" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="sOp1A83OYoMBxLgUxcqA-82" target="sOp1A83OYoMBxLgUxcqA-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" parent="1" source="sOp1A83OYoMBxLgUxcqA-82" target="sOp1A83OYoMBxLgUxcqA-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" parent="1" source="sOp1A83OYoMBxLgUxcqA-82" target="sOp1A83OYoMBxLgUxcqA-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-82" value="&lt;b&gt;Optimizations&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="275" y="1200" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-83" value="Javascript performance" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1260" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-84" value="Render performance" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-85" value="Network performance" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-89" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Optimize assets to load them faster.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Compression techniques:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. GZIP&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. BROTLI&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1320" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-90" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Image format&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. WEBP&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. PNG&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1400" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-91" value="CDN" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1450" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-92" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;HTTP2 features&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. Multiplexing -&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;parallel resource loading&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. Bundle Splitting&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1480" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-93" value="Bundle splitting" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1550" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-94" value="feed library" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1580" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-95" value="header library" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1580" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-96" value="vendor library" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1610" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-97" value="analytics" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="87.5" y="1610" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-98" value="Server side rendering" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="283.25" y="1320" width="113.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-99" value="Inline critical scripts&lt;br&gt;Inline critical js&lt;br&gt;(not recommended for large)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-100" value="load scripts async/defer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1430" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-101" value="do less stuff" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="473.25" y="1320" width="113.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-102" value="do stuff async" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="473.25" y="1360" width="113.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-103" value="Cache results" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="473.25" y="1400" width="113.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-104" value="Web workers for heavy weight jobs" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="473.25" y="1440" width="113.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-105" value="CSS class naming strategy&lt;br&gt;Don&#39;t have multilevel CSS class names" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-107" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Minified files&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Removed unused code(tree shaking)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;reduce redirects&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1640" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-108" value="&lt;b&gt;Accessibility&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="750" y="1190" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-109" value="Color scheme for color blind" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1240" width="95" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-110" value="Alt text for images" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="755" y="1240" width="95" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-111" value="aria-live attribute, so that when input field/textarea text changes screen reader can read out loud" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="875" y="1240" width="105" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-112" value="semantic HTML&lt;br&gt;use tags lige section, header, footer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1290" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-113" value="keyboard accessibility or hotkeys" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="755" y="1290" width="95" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-114" value="image placeholders" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1540" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sOp1A83OYoMBxLgUxcqA-115" value="Service workers for offline availability" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="473.25" y="1480" width="116.75" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
